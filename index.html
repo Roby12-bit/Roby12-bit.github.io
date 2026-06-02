@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofoliu | Proiecte</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <a href="index.html" class="logo">Portofoliu</a>
+
+      <!-- Meniul Drop-down -->
+      <div class="dropdown">
+        <button onclick="toggleDropdown()" class="dropbtn">Meniu ▾</button>
+        <div id="meniulMeu" class="dropdown-content">
+          <a href="index.html">Proiecte</a>
+          <a href="despre.html">Informații / CV</a>
+        </div>
+      </div>
+    </nav>
+
+    <a href="index.html" class="btn-plutitor-inapoi"> ⬅ Toate Proiectele </a>
+
+    <section class="hero">
+      <h1>Salut, sunt <span>Roberto</span></h1>
+      <p>
+        Aici poți vedea o parte din proiectele la care am lucrat pe parcursul
+        anilor școlari.
+      </p>
+    </section>
+
+    <!-- Square tabs -->
+    <main>
+      <div class="grid-portofoliu">
+        <!-- Square 1 -->
+        <a href="proiecte/Website/home.html" class="patrat-proiect">
+          <img src="imagini/Tech_Construct_Image.jpg" alt="Tech Construct" />
+          <div class="titlu-proiect">Tech Construct</div>
+        </a>
+
+        <!-- Square 2 -->
+        <a href="proiecte/Portofoliu-1/index.html" class="patrat-proiect">
+          <img src="imagini/LifeRPG_Image.jpg" alt="LifeRPG" />
+          <div class="titlu-proiect">LifeRPG</div>
+        </a>
+
+        <!-- Square 3 -->
+        <a href="proiecte/Construction_Cost/index.html" class="patrat-proiect">
+          <img
+            src="imagini/Cost_Estimator_Image.jpg"
+            alt="Construction Cost Calculator"
+          />
+          <div class="titlu-proiect">Construction Cost Calculator</div>
+        </a>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

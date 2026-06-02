@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="faq.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f5de9b0cb4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <a href="../../index.html" class="btn-plutitor-inapoi">
+      ⬅ Toate Proiectele
+    </a>
+    <div class="square"></div>
+    <div class="square2"></div>
+    <header>
+      <nav>
+        <div id="nav-menu" class="menu" onclick="toggleMenu()">
+          <ion-icon name="grid-outline" class="meniu-icon"></ion-icon>
+
+          <ul>
+            <a href="home.html"> <li class="lis">Home</li></a>
+            <a href="materials.html"><li class="lis">Materials</li></a>
+            <a href="sim.html"><li class="lis">Simulation</li></a>
+            <a href="recom.html"><li class="lis">Contact us</li></a>
+            <a href="faq.html"><li class="lis">Faq</li></a>
+            <a href="about.html"><li class="lis">About us</li></a>
+            <a href="index2.html"><li class="lis">Shopping cart</li></a>
+          </ul>
+        </div>
+      </nav>
+
+      <a href="#" class="logo">
+        <img src="Tech-Construct-unscreen.gif" alt="Tech Construct" />
+      </a>
+
+      <button class="btnLogin-popup" onclick="window.location.href = ''">
+        Account
+      </button>
+    </header>
+    <div class="wraper2">
+      <p>The Beginning of a New Asset class</p>
+      <h1>Frequently Asked Questions</h1>
+
+      <div class="faq">
+        <button class="accordion">
+          What is Tech Construct?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Tech Construct is an online platform that allows you to quickly and
+            easily compare the prices of construction materials from various
+            online stores. Our goal is to help you find the best deals and save
+            time and money when making purchases for your construction or
+            renovation projects.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          How does it work?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Tech Construct regularly collects and updates the prices of building
+            materials from several online stores. All you have to do is search
+            for the desired product on our platform, and we will show you a list
+            of its prices and availability in different stores. This way, you
+            can quickly compare the offers and choose the most advantageous
+            option for you.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <button class="accordion">
+          Does Tech Construct sell building materials?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            No, Tech Construct does not directly sell building materials. We
+            only provide you with information about prices and availability in
+            various online stores, allowing you to compare offers and choose the
+            best option. When you find a product you're interested in, you'll be
+            redirected to that store to complete your purchase.
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <button class="accordion">
+          How often are prices updated?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Prices are updated daily or at regular intervals, depending on the
+            availability of data provided by partner stores. However, since
+            prices can change quickly, we recommend that you always check the
+            final price directly on the store's website before making a
+            purchase.
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <button class="accordion">
+          Can I filter results by price or other criteria?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Yes! On Tech Construct you can use various filters to narrow down
+            your search, such as price, brand, material type, and stock
+            availability. Thus, finding the right product becomes faster and
+            more efficient.
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <button class="accordion">
+          Is using Tech Construct free?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            Yes, using the Tech Construct platform is completely free for all
+            users. We collaborate with online stores and We get a small
+            commission when a user makes a purchase through our platform, at no
+            cost additional for the buyer.
+          </p>
+        </div>
+      </div>
+      <div class="faq">
+        <button class="accordion">
+          How can I report an error or incorrect price?
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="pannel">
+          <p>
+            If you notice an incorrect price or any other problem related to the
+            information on Tech Construct, you can contact us through the
+            support form on the website or by email at
+            dobre.robertovalentin@yahoo.com. We will check the issue and take
+            action as soon as possible.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        // Fixed "length" typo
+        acc[i].addEventListener("click", function () {
+          // Fixed "addEventListener" typo
+          this.classList.toggle("active");
+          this.parentElement.classList.toggle("active");
+
+          var panel = this.nextElementSibling; // Fixed "nextElementSibling" typo
+
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+            console.log("none");
+          } else {
+            panel.style.display = "block";
+            console.log("block");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
