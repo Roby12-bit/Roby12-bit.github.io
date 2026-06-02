@@ -1,0 +1,473 @@
+.cap{
+    height: 300px;
+    width: 100%;
+}
+
+
+body{ 
+  margin: 0;
+  padding: 0;
+  color: #a9a9a9;
+  outline: hidden;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+  background-color: #330033;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='423' height='423' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='2.8'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='8'/%3E%3Ccircle cx='539' cy='269' r='8'/%3E%3Ccircle cx='603' cy='493' r='8'/%3E%3Ccircle cx='731' cy='737' r='8'/%3E%3Ccircle cx='520' cy='660' r='8'/%3E%3Ccircle cx='309' cy='538' r='8'/%3E%3Ccircle cx='295' cy='764' r='8'/%3E%3Ccircle cx='40' cy='599' r='8'/%3E%3Ccircle cx='102' cy='382' r='8'/%3E%3Ccircle cx='127' cy='80' r='8'/%3E%3Ccircle cx='370' cy='105' r='8'/%3E%3Ccircle cx='578' cy='42' r='8'/%3E%3Ccircle cx='237' cy='261' r='8'/%3E%3Ccircle cx='390' cy='382' r='8'/%3E%3C/g%3E%3C/svg%3E");
+}
+ 
+.top {
+  position: relative;
+  width: 95%;
+  height: 175px;
+  margin: 7% auto;
+}
+
+.waviy {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    animation: flip 5s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+
+  .top {
+    font-size: 100px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-bottom: 500px;
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap');
+ 
+  .branch1 a{
+    cursor: context-menu;
+    margin-top: 130px;
+    margin-right: 50px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+	  gap: 3em;
+    font-size: 1.5em;
+	  text-decoration: none;
+	  text-align: center;
+	  text-transform: uppercase;
+	  line-height: 1;
+	  color: transparent;
+    -webkit-text-stroke: 1px rgb(95, 108,182);
+	  text-shadow: 0 0 0 #fff;
+ } 
+.branch1{
+  margin-top: 10px;
+  margin-right: 40px;
+}
+
+.leaf{
+  float: left;
+  width: 50%;
+}
+
+.branch1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+* {
+  box-sizing: border-box;
+}
+
+section{
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.branch1{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+  margin-bottom: 150px;
+}
+
+.about-container{
+  width: 100%;
+  padding: 50px 8%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageSection{
+  grid-area: imageSect;
+}
+
+.infoSection{
+  grid-area: infoSect;
+}
+
+.skillSection{
+  grid-area: skillSect;
+}
+
+.about-container .about-contents{
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  gap: 70px;
+  grid-template-areas: 'imageSect infoSect'
+                       'skillSect skillSect';
+}
+
+.about-contents .imageSection{
+  position: relative;
+  min-width: 300px;
+  height: 380px;
+}
+
+.imageSection img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.about-contents .imageSection ::after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  outline: #091076 solid 30px;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+}
+
+.infoSection h1{
+  color: #dedce1;
+  font-size: 30px;
+  font-family: helvetica;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 5px;
+  position: relative;
+}
+
+.infoSection h1 ::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 110%;
+  left: 0;
+  background-color: #aaabb0;
+}
+
+.infoSection h1 ::after{
+  content: '';
+  position: absolute;
+  width: 40%;
+  height: 3px;
+  top: calc(110% - 1px);
+  left: 0px;
+  background-color: #787cb5;
+}
+
+.infoSection h2{
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  color: #787cb5;
+  padding: 14px 0px 15px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.infoSection p{
+  color: #aaabb0;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: justify;
+  padding-bottom: 8px;
+}
+
+.personalInfo{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-top: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #555;
+}
+
+.personalInfo div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.personalInfo div span{
+  color: #aaabb0;
+  letter-spacing: 1px;
+}
+
+.infoSection button{
+  min-width: 150px;
+  padding: 8px 18px;
+  border: 1px solid #787cb5;
+  border-radius: 25px;
+  font-size: 18px;
+  background-color: #2b2a2f;
+  color: #aaabb0;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-top: 10px;
+}
+
+.infoSection button:hover{
+  color: #787cb5;
+  border-color: #aaabb0;
+}
+
+.skillSection{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 5px;
+}
+
+.skillSection .subject{
+  font-size: 17px;
+  font-weight: thin;
+  color: #aaabb0;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.progress-bar{
+  width: 100%;
+  height: 16px;
+  background-color: #2b2a2f;
+  padding: 4px 6px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #444;
+  border-radius: 15px;
+}
+
+.progress-line{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #787cb5;
+  box-shadow: -1px -1px 2px #222222,
+               1px  1px 2px #111111;
+  border-radius: 15px;
+}
+
+.progress-line ::after{
+  position: absolute;
+  content: attr(value);
+  top: -35px;
+  right: 0px;
+  transform: translateX(-50%);
+  color: #aaabb0;
+  font-size: 17px;
+}
+
+@media(max-width: 1068px){
+  .about-container .about-contents{
+      grid-template-areas: 'imageSect skillSect'
+                          'infoSect infoSect';
+  }
+.skillSection{
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+}
+
+@media(max-width: 868px){
+  .about-container .about-contents{
+      grid-template-areas: 'imageSect imageSect'
+                          'infoSect infoSect'
+                          'skillSect skillSect';
+  }
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin-left: auto;
+}
+
+.btn-pulse {
+  background-color: #3498db;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.btn-wobble {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-wobble:hover {
+  animation: wobble 0.8s;
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20%) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-15%) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(10%) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5%) rotate(-1deg);
+  }
+}
+
+.btn-border-reveal {
+  background-color: transparent;
+  color: #9b59b6;
+  border: 2px solid #9b59b6;
+  position: relative;
+}
+
+.btn-border-reveal::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #9b59b6;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-border-reveal:hover::after {
+  width: 100%;
+}
+
+.btn-border-reveal:hover {
+  color: white;
+}
+
+.btn-rotate-3d {
+  background-color: #f39c12;
+  color: white;
+  perspective: 300px;
+  transform-style: preserve-3d;
+}
+
+.btn-rotate-3d:hover {
+  animation: rotate3d 0.7s;
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+/* ================= BUTON PLUTITOR INDEPENDENT ================= */
+.btn-plutitor-inapoi {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    
+    /* MODIFICAREA PENTRU TRANSPARENȚĂ */
+    opacity: 0.5; /* Butonul este pe jumătate transparent când nu e folosit */
+    
+    /* Am adăugat "opacity" în lista de tranziții pentru ca efectul de dispariție/apariție să fie fin */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efectul la trecerea cu cursorul (Hover) */
+.btn-plutitor-inapoi:hover {
+    background-color: #0ea5e9;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    
+    /* MODIFICAREA PENTRU VIZIBILITATE */
+    opacity: 1; /* Devine complet solid (netransparent) când pui mouse-ul pe el */
+}
