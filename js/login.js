@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         password: password,
         options: {
           data: {
-            username: username // Packs the username safely into the Auth metadata
+            username: username
           }
         }
       });
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return alert("Eroare la înregistrare: " + error.message);
       } else {
         alert("Înregistrare completă! Acum te poți conecta.");
-        document.getElementById('show-login').click(); // Auto-switch to login tab
+        document.getElementById('show-login').click(); 
         
         document.getElementById('signup-username').value = '';
         document.getElementById('signup-email').value = '';
