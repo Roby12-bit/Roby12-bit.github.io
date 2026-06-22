@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Navigation bar -->
     <nav class="navbar">
       <a href="index.html" class="logo">Portofoliu</a>
 
-      <!-- Meniul Drop-down -->
       <div class="dropdown">
         <button onclick="toggleDropdown()" class="dropbtn">Meniu ▾</button>
         <div id="meniulMeu" class="dropdown-content">
           <a href="index.html">Proiecte</a>
           <a href="despre.html">Informații / CV</a>
+          <a href="contact.html">Contact Us</a>
+
+          <a href="login.html" id="nav-login">Log In / Sign Up</a>
+          <a href="#" id="nav-logout" style="display: none">Log Out</a>
         </div>
       </div>
     </nav>
@@ -31,22 +33,16 @@
       </p>
     </section>
 
-    <!-- Square tabs -->
     <main>
       <div class="grid-portofoliu">
-        <!-- Square 1 -->
         <a href="proiecte/Website/home.html" class="patrat-proiect">
           <img src="imagini/Tech_Construct_Image.jpg" alt="Tech Construct" />
           <div class="titlu-proiect">Tech Construct</div>
         </a>
-
-        <!-- Square 2 -->
         <a href="proiecte/Portofoliu-1/index.html" class="patrat-proiect">
           <img src="imagini/LifeRPG_Image.jpg" alt="LifeRPG" />
           <div class="titlu-proiect">LifeRPG</div>
         </a>
-
-        <!-- Square 3 -->
         <a href="proiecte/Construction_Cost/index.html" class="patrat-proiect">
           <img
             src="imagini/Cost_Estimator_Image.jpg"
@@ -57,6 +53,8 @@
       </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabaseClient.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
