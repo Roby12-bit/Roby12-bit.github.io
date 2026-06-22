@@ -15,30 +15,39 @@ window.onclick = function(event) {
 }
 // A helper function to update the user interface based on login status
 function updateUI(session) {
+  // DIAGNOSTIC 1: Vedem exact ce zice Supabase despre utilizator
+  console.log("1. Supabase Session status:", session); 
+
   const loginBtn = document.getElementById('nav-login');
   const logoutBtn = document.getElementById('nav-logout');
   const emailInput = document.getElementById('contact-email');
+  const greetingHeading = document.getElementById('hero-greeting');
+
+  // DIAGNOSTIC 2: Vedem dacă scriptul a găsit cu succes elementul din HTML
+  console.log("2. Elementul #hero-greeting a fost găsit?:", greetingHeading);
 
   if (session) {
-    // User is Logged In
-    loginBtn.style.display = 'none';
-    logoutBtn.style.display = 'block';
-    
-    // Auto-fill the contact email form
+    if (loginBtn) loginBtn.style.display = 'none';
+    if (logoutBtn) logoutBtn.style.display = 'block';
     if (emailInput) {
       emailInput.value = session.user.email;
-      // Optional: make it read-only so they can't change it
-      // emailInput.readOnly = true; 
+    }
+
+    if (greetingHeading) {
+      const username = session.user.user_metadata?.username || 'prietene';
+      greetingHeading.innerHTML = `Salut <span>${username}</span>, sunt <span>Roberto</span>`;
+      console.log("3. Succes! Salutul a fost schimbat pentru:", username);
     }
   } else {
-    // User is NOT Logged In
-    loginBtn.style.display = 'block';
-    logoutBtn.style.display = 'none';
-    
-    // Clear the email input
+    if (loginBtn) loginBtn.style.display = 'block';
+    if (logoutBtn) logoutBtn.style.display = 'none';
     if (emailInput) {
       emailInput.value = '';
-      // emailInput.readOnly = false;
+    }
+
+    if (greetingHeading) {
+      greetingHeading.innerHTML = `Salut, sunt <span>Roberto</span>`;
+      console.log("3. Utilizatorul nu e conectat. Se afișează salutul implicit.");
     }
   }
 }
