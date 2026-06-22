@@ -6,18 +6,16 @@ function updateUI(session) {
   const emailInput = document.getElementById('contact-email');
 
   if (session) {
-    // USER LOGGED IN: Hide login interface, show logout switch
+  
     if (loginBtn) loginBtn.style.display = 'none';
     if (logoutBtn) logoutBtn.style.display = 'block';
-    
-    // Autofill the contact field securely
+  
     if (emailInput) {
       emailInput.value = session.user.email;
-      emailInput.readOnly = true; // Lock it down so they don't spoof emails
+      emailInput.readOnly = true; 
       emailInput.style.opacity = "0.7";
     }
   } else {
-    // USER LOGGED OUT: Show login interface option, hide logout
     if (loginBtn) loginBtn.style.display = 'block';
     if (logoutBtn) logoutBtn.style.display = 'none';
     
@@ -29,18 +27,15 @@ function updateUI(session) {
   }
 }
 
-// Check real-time auth states on page wake/render
 async function checkCurrentSession() {
   const { data: { session }, error } = await supabase.auth.getSession();
   updateUI(session);
 }
 
-// Watch state adjustments automatically (login, logout, token refreshes)
 supabase.auth.onAuthStateChange((event, session) => {
   updateUI(session);
 });
 
-// Handle user logging out securely
 const logoutElement = document.getElementById('nav-logout');
 if (logoutElement) {
   logoutElement.addEventListener('click', async (e) => {
@@ -50,7 +45,7 @@ if (logoutElement) {
       console.error("Logout error:", error.message);
     } else {
       alert("Te-ai deconectat!");
-      window.location.reload(); // Refresh context
+      window.location.reload(); 
     }
   });
 }
