@@ -1,4 +1,3 @@
-/* Centers the form and limits how wide it can get */
 .contact-container {
     max-width: 600px;
     margin: 60px auto;
@@ -13,7 +12,6 @@
     margin-bottom: 30px;
 }
 
-/* Spaces out the inputs */
 .form-group {
     margin-bottom: 20px;
 }
@@ -24,7 +22,6 @@
     font-weight: bold;
 }
 
-/* Standardizes the look of the input boxes */
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -35,17 +32,14 @@
     font-family: inherit; /* Inherits your global font */
 }
 
-/* Optional: Make the textarea un-resizable horizontally */
 .form-group textarea {
     resize: vertical;
 }
 
-/* Matches your existing button styles */
 #btn-send-message {
     width: 100%;
     padding: 12px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 6px;
-    /* We leave background-color and text color blank here so your style.css handles it! */
 }
