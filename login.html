@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofoliu | Autentificare</title>
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="form-toggle">
+        <button id="show-login" class="toggle-btn active">Log In</button>
+        <button id="show-signup" class="toggle-btn">Sign Up</button>
+      </div>
+
+      <form id="login-form">
+        <div class="input-group">
+          <label for="login-email">Email</label>
+          <input
+            type="email"
+            id="login-email"
+            required
+            placeholder="example@email.com"
+          />
+        </div>
+        <div class="input-group">
+          <label for="login-password">Parolă</label>
+          <input
+            type="password"
+            id="login-password"
+            required
+            placeholder="••••••••"
+          />
+        </div>
+        <button type="button" id="btn-do-login" class="submit-btn">
+          Conectare
+        </button>
+      </form>
+
+      <form id="signup-form">
+        <div class="input-group">
+          <label for="signup-username">Nume Utilizator (Username)</label>
+          <input
+            type="text"
+            id="signup-username"
+            required
+            placeholder="ex: Roberto123"
+          />
+        </div>
+        <div class="input-group">
+          <label for="signup-email">Email</label>
+          <input
+            type="email"
+            id="signup-email"
+            required
+            placeholder="example@email.com"
+          />
+        </div>
+        <div class="input-group">
+          <label for="signup-password">Parolă</label>
+          <input
+            type="password"
+            id="signup-password"
+            required
+            placeholder="••••••••"
+          />
+        </div>
+        <button type="button" id="btn-do-signup" class="submit-btn">
+          Înregistrare
+        </button>
+      </form>
+
+      <a href="index.html" class="back-link">⬅ Înapoi la Portofoliu</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabaseClient.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
