@@ -1,4 +1,3 @@
-// 1. TAB SWITCHING LOGIC (Runs as soon as the HTML loads)
 document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.getElementById('login-form');
   const signupForm = document.getElementById('signup-form');
@@ -10,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  // Switch to Login Tab
   btnShowLogin.addEventListener('click', () => {
     loginForm.style.display = 'block';
     signupForm.style.display = 'none';
@@ -18,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btnShowSignup.classList.remove('active');
   });
 
-  // Switch to Sign Up Tab
   btnShowSignup.addEventListener('click', () => {
     loginForm.style.display = 'none';
     signupForm.style.display = 'block';
@@ -28,14 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// 2. USE A UNIQUE NAME TO PREVENT CLASHES
 const supabaseDb = window.supabaseClient;
 if (!supabaseDb) {
   console.error("Supabase Client is missing! Check js/supabaseClient.js or keys.");
 }
 
 
-// 3. LOG IN SUBMISSION
 document.addEventListener('DOMContentLoaded', () => {
   const loginBtn = document.getElementById('btn-do-login');
   if (loginBtn) {
@@ -62,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// 4. SIGN UP SUBMISSION
 document.addEventListener('DOMContentLoaded', () => {
   const signupBtn = document.getElementById('btn-do-signup');
   if (signupBtn) {
@@ -74,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!supabaseDb) return alert("Baza de date nu este conectată corect.");
       if (!username || !email || !password) return alert("Te rugăm să completezi toate câmpurile.");
 
-      // Create secure account AND save the username in one single step
       const { data, error } = await supabaseDb.auth.signUp({
         email: email,
         password: password,
@@ -91,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alert("Înregistrare completă! Acum te poți conecta.");
         document.getElementById('show-login').click(); // Auto-switch to login tab
         
-        // Optional: clear the signup inputs after success
         document.getElementById('signup-username').value = '';
         document.getElementById('signup-email').value = '';
         document.getElementById('signup-password').value = '';
